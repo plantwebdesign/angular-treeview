@@ -1,0 +1,27 @@
+{
+  "name": "angular-treeview",
+  "version": "0.5",
+  "dependencies": {
+    "angular": "~1.2.0"    
+  },
+  "devDependencies": {},
+  "homepage":"https://github.com/plantwebdesign/angular-treeview",
+  "authors": [
+    "Peter Lee (peter@plantwebdesign.com)"
+  ],
+  "description": "Angularjs directive to render treeview",
+  "main": [
+    "angular.treeview.js"
+  ],
+  "keywords": [
+    "treeview",
+    "directive",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"    
+  ]
+}
