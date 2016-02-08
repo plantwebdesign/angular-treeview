@@ -11,7 +11,8 @@
   ],
   "description": "Angularjs directive to render treeview",
   "main": [
-    "angular.treeview.js"
+    "angular.treeview.js",
+    "angular.treeview.css"
   ],
   "keywords": [
     "treeview",
