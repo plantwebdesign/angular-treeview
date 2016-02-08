@@ -29,6 +29,9 @@
 		return {
 			restrict: 'A',
 			link: function ( scope, element, attrs ) {
+
+				scope.showLeafIcons = false;
+
 				//tree id
 				var treeId = attrs.treeId;
 			
@@ -50,8 +53,8 @@
 						'<li data-ng-repeat="node in ' + treeModel + '">' +
 							'<i class="collapsed" data-ng-show="node.' + nodeChildren + '.length && node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
 							'<i class="expanded" data-ng-show="node.' + nodeChildren + '.length && !node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
-							'<i class="normal" data-ng-hide="node.' + nodeChildren + '.length"></i> ' +
-							'<span data-ng-class="node.selected" data-ng-click="' + treeId + '.selectNodeLabel(node)" data-ng-dblclick="doubleClickAction(node)">{{node.' + nodeLabel + '}}</span>' +
+							'<i class="normal" data-ng-if="showLeafIcons" data-ng-hide="node.' + nodeChildren + '.length"></i> ' +
+							'<span data-ng-class="node.selected" data-ng-click="' + treeId + '.selectNodeHead(node)" data-ng-dblclick="doubleClickAction(node)">{{node.' + nodeLabel + '}}</span>' +
 							'<div data-ng-hide="node.collapsed" data-tree-id="' + treeId + '" data-tree-model="node.' + nodeChildren + '" data-node-id=' + nodeId + ' data-node-label=' + nodeLabel + ' data-node-children=' + nodeChildren + '></div>' +
 						'</li>' +
 					'</ul>';
